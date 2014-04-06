@@ -15,6 +15,11 @@ Or install as gem:
 
 ## Configuration
 
+Add the gem to `_config.yml`:
+
+    gems:
+      - jekyll-pandoc
+
 Change the Jekyll markdown processor in `_config.yml`:
 
     markdown: pandoc
