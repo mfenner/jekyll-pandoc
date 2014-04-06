@@ -14,11 +14,10 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = ">= 1.3.6"
 
-  s.add_dependency "jekyll", "~> 1.4.3"
+  s.add_dependency "jekyll", ">=  1.4.3"
   s.add_dependency "pandoc-ruby", "~> 0.7.5"
   s.add_development_dependency "rspec", "~> 2.6"
   s.add_development_dependency "rdiscount", "~> 2.1.7"
 
   s.files       = Dir.glob("lib/**/*.rb")
-  s.require_path = 'lib'
 end
