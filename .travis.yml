@@ -1,11 +1,11 @@
 language: haskell
 
+rvm:
+  - 1.9.3
+
 install:
   - travis_retry cabal install pandoc pandoc-citeproc
   - travis_retry bundle install
-
-rvm:
-  - 1.9.3
 
 deploy:
   provider: rubygems
