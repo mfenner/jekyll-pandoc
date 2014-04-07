@@ -14,22 +14,22 @@ Run `bundle install` after adding the gem to your Jekyll `Gemfile`:
 
     gem "jekyll-pandoc", "~> 0.0.1"
 
-Or install as gem:
+If you are not using Bundler, install as gem:
 
     [sudo] gem install jekyll-pandoc
 
 ## Configuration
 
-Add the gem to `_config.yml`:
+Add the gem to the Jekyll `_config.yml`:
 
     gems:
       - jekyll-pandoc
 
-Change the Jekyll markdown processor in `_config.yml`:
+Change the markdown processor in the Jekyll `_config.yml`:
 
     markdown: pandoc
 
-Additional pandoc options can be provided in `_config.yml`:
+Additional pandoc options can be provided in the Jekyll `_config.yml`:
 
     pandoc:
       extensions:
