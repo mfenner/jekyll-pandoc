@@ -1,0 +1,8 @@
+deploy:
+  provider: rubygems
+  api_key:
+    secure: jA7MwRxyZn+teNdvbvv6JGzKUqF22OW1t84c4ETiV7YQBODm9Jara3I2+JNvdDoi7u3Mhv6R25TIxFS9fzllaCzxFl7MpyMR/cu4nLz2LTwrxbDxS6fzzKm2XtPEynEcIcF9GLH97Gub7jXOVQJFYKE93HexjoTFPL0vAxZ1ihg=
+  gem: jekyll-pandoc
+  on:
+    tags: true
+    repo: mfenner/jekyll-pandoc

@@ -1,7 +1,11 @@
 jekyll-pandoc
 =============
 
+[![Build Status](https://travis-ci.org/mfenner/jekyll-pandoc.svg)](https://travis-ci.org/mfenner/jekyll-pandoc)
+
 [Pandoc](http://johnmacfarlane.net/pandoc/) markdown converter for the [Jekyll](https://github.com/jekyll/jekyll) static site generator. Based on [jekyll-pandoc-plugin](https://github.com/dsanson/jekyll-pandoc-plugin) by David Sanson, but with some small changes, and packaged as Ruby gem.
+
+Jekyll-pandoc uses the [pandoc-ruby](https://github.com/alphabetum/pandoc-ruby) gem as a Ruby wrapper for Pandoc.
 
 ## Installation
 
