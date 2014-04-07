@@ -16,6 +16,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "jekyll", ">=  1.4.3"
   s.add_dependency "pandoc-ruby", "~> 0.7.5"
+  s.add_development_dependency 'rake'
   s.add_development_dependency "rspec", "~> 2.6"
   s.add_development_dependency "rdiscount", "~> 2.1.7"
 
