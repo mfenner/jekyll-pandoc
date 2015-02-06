@@ -12,7 +12,7 @@ module Jekyll
         rescue LoadError
           STDERR.puts 'You are missing a library required for Pandoc. Please run:'
           STDERR.puts ' $ [sudo] gem install pandoc-ruby'
-          raise FatalException, "Missing dependency: pandoc-ruby"
+          raise Errors::FatalException, "Missing dependency: pandoc-ruby"
         end
 
         def convert(content)
@@ -20,7 +20,7 @@ module Jekyll
           format = config_option('format', DEFAULT_FORMAT)
 
           content = PandocRuby.new(content, *extensions).send("to_#{format}")
-          raise FatalException, "Conversion returned empty string" unless content.length > 0
+          raise Erros::FatalException, "Conversion returned empty string" unless content.length > 0
           content
         end
 

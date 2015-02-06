@@ -39,7 +39,7 @@ describe Jekyll::Converters::Markdown::PandocParser do
                       'pandoc' => { 'extensions' => [{ 'bibliography' => 'bibliography/references.bib' }] }}}
 
       it "should convert markdown" do
-        expect { subject.convert(markdown) }.to raise_error(Jekyll::FatalException, "Conversion returned empty string")
+        expect { subject.convert(markdown) }.to raise_error(Jekyll::Errors::FatalException, "Conversion returned empty string")
       end
     end
 
