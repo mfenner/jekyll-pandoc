@@ -5,8 +5,7 @@ module Jekyll
 
       PARSERS = { 'redcarpet' => RedcarpetParser,
                   'kramdown' => KramdownParser,
-                  'rdiscount' => RDiscountParser,
-                  'maruku' => MarukuParser }
+                  'rdiscount' => RDiscountParser }
 
       def setup
         return if @setup
