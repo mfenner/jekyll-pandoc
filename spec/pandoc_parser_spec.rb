@@ -11,7 +11,7 @@ describe Jekyll::Converters::Markdown::PandocParser do
     subject { PandocRuby }
 
     it "should convert markdown" do
-      subject.new(markdown).to_html.should eq(html)
+      expect(subject.new(markdown).to_html).to eq(html)
     end
   end
 
@@ -20,7 +20,7 @@ describe Jekyll::Converters::Markdown::PandocParser do
 
     it "should initialize" do
       parser = subject.new(Jekyll::Configuration::DEFAULTS.merge(config))
-      parser.public_methods.should include(:convert, :config_option)
+      expect(parser.public_methods).to include(:convert, :config_option)
     end
   end
 
@@ -30,7 +30,7 @@ describe Jekyll::Converters::Markdown::PandocParser do
     describe "convert" do
 
       it "should convert markdown" do
-        subject.convert(markdown).should eq(html)
+        expect(subject.convert(markdown)).to eq(html)
       end
     end
 
@@ -46,17 +46,17 @@ describe Jekyll::Converters::Markdown::PandocParser do
     describe "config_option" do
       it "should read config option" do
         opts = subject.config_option("extensions")
-        opts.should eq(config['pandoc']['extensions'])
+        expect(opts).to eq(config['pandoc']['extensions'])
       end
 
       it "should read empty config option" do
         opts = subject.config_option("format")
-        opts.should be_nil
+        expect(opts).to be_nil
       end
 
       it "should override config option" do
         opts = subject.config_option("format", "html5")
-        opts.should eq("html5")
+        expect(opts).to eq("html5")
       end
     end
   end

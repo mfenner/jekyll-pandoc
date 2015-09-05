@@ -17,8 +17,8 @@ Gem::Specification.new do |s|
   s.add_dependency "jekyll", ">= 2.1.1"
   s.add_dependency "pandoc-ruby", "~> 1.0.0"
   s.add_development_dependency 'rake'
-  s.add_development_dependency "rspec", "~> 2.6"
-  s.add_development_dependency "rdiscount", "~> 2.1.7"
+  s.add_development_dependency "rspec", "~> 3.3"
+  s.add_development_dependency "rdiscount", "~> 2.1.8"
 
   s.files       = Dir.glob("lib/**/*.rb")
 end

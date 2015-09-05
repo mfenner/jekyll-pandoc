@@ -6,7 +6,7 @@ describe Jekyll::Converters::Markdown do
     subject { Jekyll::Converters::Markdown.new Jekyll::Configuration::DEFAULTS }
 
     it "should setup parser" do
-      subject.setup.should be_true
+      expect(subject.setup).to be true
     end
   end
 
@@ -14,7 +14,7 @@ describe Jekyll::Converters::Markdown do
     subject { Jekyll::Converters::Markdown.new Jekyll::Configuration::DEFAULTS.merge({ 'markdown' => 'rdiscount' }) }
 
     it "should setup parser" do
-      subject.setup.should be_true
+      expect(subject.setup).to be true
     end
   end
 
@@ -22,7 +22,7 @@ describe Jekyll::Converters::Markdown do
     subject { Jekyll::Converters::Markdown.new Jekyll::Configuration::DEFAULTS.merge({ 'markdown' => 'pandoc' }) }
 
     it "should setup parser" do
-      subject.setup.should be_true
+      expect(subject.setup).to be true
     end
   end
 
