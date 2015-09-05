@@ -13,31 +13,42 @@ Jekyll-pandoc uses the [pandoc-ruby](https://github.com/alphabetum/pandoc-ruby) 
 
 Run `bundle install` after adding the gem to your Jekyll `Gemfile`:
 
-    gem "jekyll-pandoc", "~> 0.0.1"
+```
+gem "jekyll-pandoc"
+```
 
 If you are not using Bundler, install as gem:
 
-    [sudo] gem install jekyll-pandoc
+```
+[sudo] gem install jekyll-pandoc
+```
 
 ## Configuration
 
 Add the gem to the Jekyll `_config.yml`:
 
-    gems:
-      - jekyll-pandoc
+```
+gems:
+  - jekyll-pandoc
+```
 
 Change the markdown processor in the Jekyll `_config.yml`:
 
-    markdown: pandoc
+```
+markdown: pandoc
+```
 
 Additional pandoc options can be provided in the Jekyll `_config.yml`:
 
-    pandoc:
-      extensions:
-        - smart
-        - mathjax
-        - csl: _styles/apa.csl
-        - bibliography: bibliography/references.bib
+```
+pandoc:
+  extensions:
+    - normalize
+    - smart
+    - mathjax
+    - csl: _styles/apa.csl
+    - bibliography: bibliography/references.bib
+```
 
 ## Contributing
 
