@@ -15,7 +15,7 @@ module Jekyll
       rescue NameError
         Jekyll.logger.error "Invalid Markdown Processor:", "#{@config['markdown']}"
         Jekyll.logger.error "", "Valid options are [ #{PARSERS.keys.join(" | ")} ]"
-        raise Jekyll::FatalException, "Invalid Markdown Processor: #{@config['markdown']}"
+        raise Jekyll::Errors::FatalException, "Invalid Markdown Processor: #{@config['markdown']}"
       end
 
       private
