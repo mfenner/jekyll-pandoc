@@ -42,7 +42,7 @@ gems:
 Change the markdown processor in the Jekyll `_config.yml`:
 
 ```
-markdown: pandoc
+markdown: Pandoc
 ```
 
 Additional pandoc options can be provided in the Jekyll `_config.yml`:
