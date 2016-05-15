@@ -4,14 +4,14 @@ rvm:
   - 2.2
 
 before_install:
-- wget https://github.com/jgm/pandoc/releases/download/1.15.0.6/pandoc-1.15.0.6-1-amd64.deb
-- sudo dpkg -i pandoc-1.15.0.6-1-amd64.deb
-- rm pandoc-1.15.0.6-1-amd64.deb
+- wget https://github.com/jgm/pandoc/releases/download/1.15.2/pandoc-1.15.2-1-amd64.deb
+- sudo dpkg -i ppandoc-1.15.2-1-amd64.deb
+- rm pandoc-1.15.2-1-amd64.deb
 
 install:
   - travis_retry bundle install
 
-script: bundle exec rake
+script: bundle exec rspec
 
 deploy:
   provider: rubygems
