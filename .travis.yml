@@ -1,12 +1,13 @@
 language: ruby
 
 rvm:
-  - 2.2
+  - 2.3.0
 
 before_install:
 - wget https://github.com/jgm/pandoc/releases/download/1.15.2/pandoc-1.15.2-1-amd64.deb
 - sudo dpkg -i pandoc-1.15.2-1-amd64.deb
 - rm pandoc-1.15.2-1-amd64.deb
+- gem install bundler
 
 install:
   - travis_retry bundle install
