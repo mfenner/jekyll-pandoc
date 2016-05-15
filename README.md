@@ -5,9 +5,16 @@ jekyll-pandoc
 [![Gem Version](https://badge.fury.io/rb/jekyll-pandoc.svg)](http://badge.fury.io/rb/jekyll-pandoc)
 [![Code Climate](https://codeclimate.com/github/mfenner/jekyll-pandoc.png)](https://codeclimate.com/github/mfenner/jekyll-pandoc)
 
-[Pandoc](http://johnmacfarlane.net/pandoc/) markdown converter for the [Jekyll](https://github.com/jekyll/jekyll) static site generator. Based on [jekyll-pandoc-plugin](https://github.com/dsanson/jekyll-pandoc-plugin) by David Sanson, but with some small changes, test coverage, and packaged as Ruby gem.
+[Pandoc](http://johnmacfarlane.net/pandoc/) markdown converter for the [Jekyll](https://github.com/jekyll/jekyll) static site generator. Originally based on [jekyll-pandoc-plugin](https://github.com/dsanson/jekyll-pandoc-plugin) by David Sanson.
 
 Jekyll-pandoc uses the [pandoc-ruby](https://github.com/alphabetum/pandoc-ruby) gem as a Ruby wrapper for Pandoc.
+
+## Requirements
+
+* Jekyll, version `3.0` or higher
+* Pandoc, version `1.15` or higher
+
+Install version `1.0.2` for older jekyll versions
 
 ## Installation
 

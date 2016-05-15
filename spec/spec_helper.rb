@@ -3,5 +3,4 @@ Bundler.setup
 
 require 'pandoc-ruby'
 require 'jekyll'
-require File.expand_path("../../lib/jekyll/converters/markdown.rb", __FILE__)
-require 'jekyll/converters/markdown/pandoc_parser'
+require File.expand_path("../../lib/jekyll-pandoc.rb", __FILE__)

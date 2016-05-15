@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Jekyll::Converters::Markdown::PandocParser do
+describe Jekyll::Converters::Markdown::Pandoc do
 
   let(:config) {{ 'markdown' => 'pandoc',
                   'pandoc' => { 'extensions' => ["smart", "mathjax"] }}}
@@ -16,7 +16,7 @@ describe Jekyll::Converters::Markdown::PandocParser do
   end
 
   describe "class methods" do
-    subject { Jekyll::Converters::Markdown::PandocParser }
+    subject { Jekyll::Converters::Markdown::Pandoc }
 
     it "should initialize" do
       parser = subject.new(Jekyll::Configuration::DEFAULTS.merge(config))
@@ -25,7 +25,7 @@ describe Jekyll::Converters::Markdown::PandocParser do
   end
 
   describe "instance methods" do
-    subject { Jekyll::Converters::Markdown::PandocParser.new Jekyll::Configuration::DEFAULTS.merge(config) }
+    subject { Jekyll::Converters::Markdown::Pandoc.new Jekyll::Configuration::DEFAULTS.merge(config) }
 
     describe "convert" do
 

@@ -19,7 +19,7 @@ describe Jekyll::Converters::Markdown do
   end
 
   describe "pandoc parser" do
-    subject { Jekyll::Converters::Markdown.new Jekyll::Configuration::DEFAULTS.merge({ 'markdown' => 'pandoc' }) }
+    subject { Jekyll::Converters::Markdown.new Jekyll::Configuration::DEFAULTS.merge({ 'markdown' => 'Pandoc' }) }
 
     it "should setup parser" do
       expect(subject.setup).to be true
@@ -27,10 +27,10 @@ describe Jekyll::Converters::Markdown do
   end
 
   describe "invalid parser" do
-    subject { Jekyll::Converters::Markdown.new Jekyll::Configuration::DEFAULTS.merge({ 'markdown' => 'pandoc!' }) }
+    subject { Jekyll::Converters::Markdown.new Jekyll::Configuration::DEFAULTS.merge({ 'markdown' => 'Pandoc!' }) }
 
     it "should not setup parser" do
-      expect { subject.setup }.to raise_error(Jekyll::Errors::FatalException, "Invalid Markdown Processor: pandoc!")
+      expect { subject.setup }.to raise_error(Jekyll::Errors::FatalException, "Bailing out; invalid Markdown processor.")
     end
   end
 
