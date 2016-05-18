@@ -15,7 +15,7 @@ module Jekyll
         format = config_option('format', DEFAULT_FORMAT)
 
         content = PandocRuby.new(content, *extensions).send("to_#{format}")
-        raise Erros::FatalException, "Conversion returned empty string" unless content.length > 0
+        raise Jekyll::Errors::FatalException, "Conversion returned empty string" unless content.length > 0
         content
       end
 

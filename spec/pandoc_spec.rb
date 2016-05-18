@@ -1,8 +1,7 @@
 require 'spec_helper'
 
 describe Jekyll::Converters::Markdown::Pandoc do
-
-  let(:config) {{ 'markdown' => 'pandoc',
+  let(:config) {{ 'markdown' => 'Pandoc',
                   'pandoc' => { 'extensions' => ["smart", "mathjax"] }}}
   let(:markdown) { "## This is a heading" }
   let(:html) { "<h2 id=\"this-is-a-heading\">This is a heading</h2>\n" }
@@ -28,14 +27,17 @@ describe Jekyll::Converters::Markdown::Pandoc do
     subject { Jekyll::Converters::Markdown::Pandoc.new Jekyll::Configuration::DEFAULTS.merge(config) }
 
     describe "convert" do
-
       it "should convert markdown" do
         expect(subject.convert(markdown)).to eq(html)
+      end
+
+      it "should convert empty string" do
+        expect(subject.convert("")).to eq("\n")
       end
     end
 
     describe "convert with missing bibliography" do
-      let(:config) {{ 'markdown' => 'pandoc',
+      let(:config) {{ 'markdown' => 'Pandoc',
                       'pandoc' => { 'extensions' => [{ 'bibliography' => 'bibliography/references.bib' }] }}}
 
       it "should convert markdown" do

@@ -10,14 +10,6 @@ describe Jekyll::Converters::Markdown do
     end
   end
 
-  describe "rdiscount parser" do
-    subject { Jekyll::Converters::Markdown.new Jekyll::Configuration::DEFAULTS.merge({ 'markdown' => 'rdiscount' }) }
-
-    it "should setup parser" do
-      expect(subject.setup).to be true
-    end
-  end
-
   describe "pandoc parser" do
     subject { Jekyll::Converters::Markdown.new Jekyll::Configuration::DEFAULTS.merge({ 'markdown' => 'Pandoc' }) }
 
